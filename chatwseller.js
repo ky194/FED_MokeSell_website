@@ -1,4 +1,6 @@
-// Simulated data (replace with API calls as needed)
+const API_URL = "https://fedassgn2chatdb-5238.restdb.io/rest/chats  "; 
+const API_KEY = "67965019ed070e192c3bbb9b"; 
+
 const chats = [
     { id: 1, username: "seller1", lastMessage: "See you tomorrow!", avatar: "https://via.placeholder.com/50" },
     { id: 2, username: "seller2", lastMessage: "Let me know if you agree.", avatar: "https://via.placeholder.com/50" },
@@ -18,8 +20,7 @@ const chats = [
 //     populateChatList();
 //   });
 
-  
-  // Populate the chat list
+
   function populateChatList() {
     const chatList = document.getElementById("chat-list");
     chatList.innerHTML = "";
@@ -37,36 +38,70 @@ const chats = [
     });
   }
   
-  // Populate messages in the chat window
-  function populateMessages() {
-    const chatMessages = document.getElementById("chat-messages");
+  async function populateMessages(chatId) {
+    const chatMessages = document.querySelector(".chat-messages");
     chatMessages.innerHTML = "";
-    messages.forEach((msg) => {
-      const div = document.createElement("div");
-      div.classList.add("message", msg.sender);
-      div.textContent = msg.text;
-      chatMessages.appendChild(div);
-    });
-    chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
-  }
   
-  // Open chat when a user is clicked
-  function openChat(chat) {
-    document.getElementById("chat-username").textContent = chat.username;
-    populateMessages();
-  }
+    try {
+      const response = await fetch(`${API_URL}?q={"chat_id": "${chatId}"}`, {
+        headers: { "x-apikey": API_KEY },
+      });
+      const data = await response.json();
   
-  // Send message
-  document.getElementById("send-message-btn").addEventListener("click", () => {
-    const input = document.getElementById("message-input");
-    if (input.value.trim()) {
-      messages.push({ sender: "buyer", text: input.value });
-      input.value = "";
-      populateMessages();
+      data.forEach((msg) => {
+        const div = document.createElement("div");
+        div.classList.add("message", msg.sender === "buyer" ? "message-buyer" : "message-seller");
+        div.textContent = msg.message;
+        chatMessages.appendChild(div);
+      });
+  
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    } catch (error) {
+      console.error("Failed to load messages:", error);
     }
-  });
+  }  
   
-  // Initialize
+  function openChat(chat) {
+    document.querySelector(".seller-details strong").textContent = chat.username;
+    populateMessages(chat.id); // get msgs for selected chat
+  }
+  
+  
+  document.querySelector(".send-button").addEventListener("click", async () => {
+    const input = document.querySelector(".message-input");
+    const messageText = input.value.trim();
+  
+    if (messageText) {
+      try {
+        // save msg to db
+        const messageData = {
+          chat_id: "chat-id", 
+          message: messageText,
+          sender: "buyer",
+          timestamp: new Date().toISOString(),
+        };
+  
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-apikey": API_KEY,
+          },
+          body: JSON.stringify(messageData),
+        });
+  
+        if (response.ok) {
+          input.value = "";
+          populateMessages("example-chat-id"); // for reloading msgs
+        } else {
+          console.error("Failed to send message:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error sending message:", error);
+      }
+    }
+  });  
+  
   document.addEventListener("DOMContentLoaded", () => {
     populateChatList();
     populateMessages();

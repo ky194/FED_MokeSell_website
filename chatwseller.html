@@ -36,7 +36,7 @@
     </div>
 
     <!-- Chat Messages -->
-    <div class="chat-messages">
+    <div id="chat-messages" class="chat-messages">
       <!-- Buyer's message -->
       <div class="message message-buyer">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -45,21 +45,12 @@
       <div class="message message-seller">
         Hello! Thank you for your message. How can I assist you?
       </div>
-      <!-- Buyer's message -->
-      <div class="message message-buyer">
-        Is the item still available?
-      </div>
-      <!-- Seller's message -->
-      <div class="message message-seller">
-        Yes, it is available. Would you like to make an offer?
-      </div>
     </div>
   </main>
 
   <footer class="chat-footer">
-    <input type="text" class="message-input" placeholder="Type a message...">
-    <button class="send-button">Send</button>
+    <input type="text" id="message-input" class="message-input" placeholder="Type a message...">
+    <button id="send-message-btn" class="send-button">Send</button>
   </footer>
 </body>
 </html>
-
