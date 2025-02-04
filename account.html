@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">MOKESELL</h1>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <div class="icons">
+            <span>❤️</span>
+            <span>🔔</span>
+            <span>⚙️</span>
+        </div>
+    </header>
+
+    <div class="profile-section">
+        <div class="profile-info">
+            <img src="user-avatar.png" alt="User Avatar" class="avatar">
+            <div>
+                <h2>user1</h2>
+                <p>📍 Singapore</p>
+            </div>
+            <div class="stats">
+                <p><strong>XX</strong> Followers</p>
+                <p><strong>XXy XXm</strong> Joined</p>
+            </div>
+            <button class="edit-profile">✏️ Edit Profile</button>
+        </div>
+    </div>
+
+    <section class="listings">
+        <h3>LISTINGS</h3>
+        <div class="listing-grid">
+            <div class="listing-item">ITEM X <br> $X.XX <br> SECOND HAND</div>
+            <div class="listing-item">ITEM X <br> $X.XX <br> SECOND HAND</div>
+            <div class="listing-item">ITEM X <br> $X.XX <br> SECOND HAND</div>
+            <div class="listing-item">ITEM X <br> $X.XX <br> SECOND HAND</div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h3>REVIEWS</h3>
+        <div id="reviews-container">
+            <!-- Reviews will be added dynamically here -->
+        </div>
+        <button id="load-more" class="show-more">Show more</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MokeSell | Help Center | Privacy Policy | Terms</p>
+    </footer>
+
+    <script src="account.js"></script>
+</body>
+</html>
