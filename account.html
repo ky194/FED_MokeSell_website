@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
     <header>
-        <h1 class="logo">MOKESELL</h1>
-        <input type="text" class="search-bar" placeholder="Search...">
+        
+        <img src="./image resources/mokesell logo-Photoroom.png" alt="mokesell-logo" class="mokesell-logo">
+
+        <input type="text" class="search-bar" placeholder="🔎 Search...">
         <div class="icons">
+
             <span>❤️</span>
+
             <a href="chatwseller.html">
                 <span>💬</span>
             </a>
+
             <span>⚙️</span>
+
         </div>
+
     </header>
 
     <div class="profile-section">
+
         <div class="profile-info">
-            <img src="user-avatar.png" alt="User Avatar" class="avatar">
-            <div>
+            <img src="./image resources/user.png" alt="User Avatar" class="avatar">
+
+            <div class="user-header">
                 <h2>user1</h2>
                 <p>📍 Singapore</p>
             </div>
+
             <div class="stats">
-                <p><strong>XX</strong> Followers</p>
-                <p><strong>XXy XXm</strong> Joined</p>
+
+                <div class="followers-joined">
+                    <p><strong>XX</strong> Followers</p>
+                    <p>Joined <strong>XXy XXm</strong></p>
+                </div>
+                
+                <a href="edit-profile.html">
+                    <button class="edit-profile">✏️</button>
+                </a>
+
             </div>
-            <button class="edit-profile">✏️ Edit Profile</button>
+
         </div>
     </div>
 

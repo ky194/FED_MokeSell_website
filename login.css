@@ -16,11 +16,11 @@ body {
     align-items: center;
     justify-content: center;
     width: 90%;
-    max-width: 800px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    gap: 20px;
   }
   
   .branding {
@@ -45,12 +45,17 @@ body {
   }
   
   .input-field {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    width: 450px;
+    height: 44px;
+    font-size: 17px;
+    padding: 1rem;
+    border: none; 
+    outline: none; 
+    border-radius: 15px; 
+    background-color: #D9D9D9; 
+    color: grey; 
   }
   
   .input-field:focus {
@@ -58,27 +63,26 @@ body {
     box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
   }
   
-  .btn {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #ff6b6b;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #d95a5a;
-  }
-  
-  .btn.secondary {
-    background-color: #c4c4c4;
-  }
-  
-  .btn.secondary:hover {
-    background-color: #a6a6a6;
-  }
+  button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    width: 478px;
+    height: 44px;
+    font-size: 20px;
+    border: none; 
+    outline: none; 
+    border-radius: 20px; 
+    background-color: #D9D9D9; 
+    color: black; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #D9D9D9; 
+}
+
+button:focus {
+    outline: none; 
+}
   

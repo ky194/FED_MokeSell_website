@@ -35,7 +35,7 @@ https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-i
 
 ## Credits 
 Product pictures are taken from Carousell & Shopee.
-Avatar pictures were taken from Storyset.
+Stock pictures were taken from Storyset & Flaticon.
 
 ### Content
 
