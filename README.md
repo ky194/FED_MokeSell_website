@@ -8,7 +8,7 @@ MokeSell is built for individuals looking to buy and sell used items in a hassle
 ### User Storeies
 1. As a buyer, I want to browse product listings so that I can find items to purchase
 2. As a seller, I want to list items for sale so that I can reach potential buyers
-### Wireframs
+### Wireframes
 Figma was used to create the mokeup
 https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-id=2019-6&p=f&t=hLfFJtvh1ASkYTlm-0
 
