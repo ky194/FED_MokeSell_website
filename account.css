@@ -58,7 +58,19 @@ header {
 }
 
 .user-header {
-  margin-left: 20px;
+  margin-left: 20px; 
+}
+
+.user-header h2 {
+  margin: 0; 
+  padding: 0; 
+  line-height: 1; 
+}
+
+.user-header p {
+  margin: 4px 0 0 0; 
+  padding: 0;
+  line-height: 1.5;
 }
 
 .avatar {
