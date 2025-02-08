@@ -45,15 +45,18 @@
   }
   
   .listings-button {
-    display: block;
-    margin: 0 auto 20px;
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    width: 170px;
+    height: 50px;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
+    outline: none;
+    border-radius: 10px;
+    background-color: #C97C7C;
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
   .listings-button:hover {
