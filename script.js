@@ -10,7 +10,7 @@ async function fetchProductDetails() {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'x-apikey': '67a880d799fb604636e983b6'  // Include the API Key for authorization
+        'x-apikey': apiKey  // Include the API Key for authorization
       }
     });
 
@@ -30,7 +30,7 @@ async function fetchProductDetails() {
 
       itemCard.innerHTML = `
         <div class="item-card">
-          <img src="${product.listingimg}" alt="${product.listingname}" class="item-image">
+          <img src="${product.listingimg}" alt="${product.listingname}" class="item-image"> <!-- Use the listingimg field here -->
           <div class="item-title">${product.listingname}</div>
           <div class="item-price">$${product.listprice.toFixed(2)}</div>
           <div class="item-condition">${product.listingcond}</div>
@@ -45,3 +45,4 @@ async function fetchProductDetails() {
 
 // Call the function when the page loads
 document.addEventListener("DOMContentLoaded", fetchProductDetails);
+
