@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat with Seller - MokeSell</title>
   <link rel="stylesheet" href="chatwseller.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-  <header class="chat-header">
-    <div class="back-button">←</div>
-    <div class="seller-info">
-      <div class="seller-avatar"></div>
-      <div class="seller-details">
-        <p><strong>seller1</strong></p>
-        <p>Active 2 minutes ago</p>
-      </div>
-    </div>
-    <div class="alert-icon">⚠</div>
-  </header>
 
-  <main class="chat-content">
-    <div class="item-info">
-      <div class="item-details">
-        <h3>ITEM X</h3>
-        <p>$X.XX - SECOND HAND</p>
-      </div>
-      <div class="status-buttons">
-        <button class="status accepted">ACCEPTED</button>
-        <button class="status review">LEAVE REVIEW</button>
-      </div>
-      <div class="offer-price">
-        <p class="offer-amount">$X.XX</p>
-        <p class="offer-status">MADE AN OFFER</p>
-      </div>
+  <div class="chat-container">
+
+    <aside class="chat-sidebar">
+
+      <h2>Chats</h2>
+      <ul id="chat-list" class="chat-list"></ul>
+
+    </aside>
+    
+    <div class="chat-main">
+
+      <header class="chat-header">
+
+        <a href="index.html">
+
+          <div class="back-button">←</div>
+
+        </a>
+
+        <div class="seller-info">
+
+          <div class="seller-avatar"></div>
+
+          <div class="seller-details">
+            <p><strong>tiifa</strong></p>
+            <p>Active 2 minutes ago</p>
+          </div>
+
+        </div>
+
+        <div class="alert-icon">⚠</div>
+
+      </header>
+
+      <main class="chat-content">
+
+        <div id="chat-messages" class="chat-messages">
+
+          <div class="message message-buyer">hi, is this still available?</div>
+          <div class="message message-seller">yes! it is, will you be making an offer?</div>
+
+        </div>
+
+      </main>
+
+      <footer class="chat-footer">
+
+        <input type="text" id="message-input" class="message-input" placeholder="Type a message...">
+        <button id="send-message-btn" class="send-button">Send</button>
+
+      </footer>
+
     </div>
 
-    <!-- Chat Messages -->
-    <div id="chat-messages" class="chat-messages">
-      <!-- Buyer's message -->
-      <div class="message message-buyer">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
-      <!-- Seller's message -->
-      <div class="message message-seller">
-        Hello! Thank you for your message. How can I assist you?
-      </div>
-    </div>
-  </main>
+  </div>
 
-  <footer class="chat-footer">
-    <input type="text" id="message-input" class="message-input" placeholder="Type a message...">
-    <button id="send-message-btn" class="send-button">Send</button>
-  </footer>
+  <script src="chatwseller.js"></script>
+
 </body>
+
 </html>
