@@ -1,7 +1,6 @@
-// Initialize Supabase client
-const supabaseUrl = 'https://lfnneupmzaujymixridw.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxmbm5ldXBtemF1anltaXhyaWR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg4NjAyODgsImV4cCI6MjA1NDQzNjI4OH0.t4Ar8iB5MkNhsU8G7PTBzfV9isLPgn7tc-pk9S3A35I';  // Replace with your anon key
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+// Initialize restDB API URL and Key
+const apiUrl = 'https://fedassgn2-16f0.restdb.io/rest/listing';  // restDB API URL
+const apiKey = '67a880d799fb604636e983b6';  // Your restDB API Key
 
 // Fetch product details for a single product
 async function fetchProductDetails() {
@@ -15,20 +14,20 @@ async function fetchProductDetails() {
   }
 
   try {
-    // Fetch product details from Supabase
-    const { data, error } = await supabase
-      .from('listing')  // Replace with your actual table name
-      .select('*')
-      .eq('listingid', listingid);
+    // Fetch product details from restDB using the GET method
+    const response = await fetch(`${apiUrl}/${listingid}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-apikey': '67a880d799fb604636e983b6'  
+      }
+    });
 
-    if (error) throw error;
+    const product = await response.json();
 
-    if (data.length === 0) {
-      console.error("Product not found");
-      return;
+    if (!response.ok) {
+      throw new Error('Error fetching product data');
     }
-
-    const product = data[0];
 
     // Populate the product details on the page
     document.getElementById('product-title').textContent = product.listingname;
@@ -40,7 +39,8 @@ async function fetchProductDetails() {
 
     // Set the main image
     const mainImage = document.querySelector('.main-image');
-    mainImage.style.backgroundImage = `url(./image_resources/${product.image})`;
+    mainImage.style.backgroundImage = `url(${product.listingimg})`; // Update with the correct field for the image URL
+
   } catch (error) {
     console.error("Error fetching product details:", error);
   }

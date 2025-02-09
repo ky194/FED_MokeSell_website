@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Listing - MokeSell</title>
   <link rel="stylesheet" href="productlisting.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.1/dist/umd/supabase.min.js"></script>
-  <script src="productlisting.js"></script>  
-
 </head>
 
 <body>
   <header>
-
     <a href="index.html">
-      <img src="./image resources/mokesell logo-Photoroom.png" alt="mokesell-logo" class="mokesell-logo">
+      <img src="./image_resources/mokesell logo-Photoroom.png" alt="mokesell-logo" class="mokesell-logo">
     </a>
-
     <input type="text" class="search-bar" placeholder="🔎 Search...">
     <div class="icons">
-
-    <span>❤️</span>
-
-    <a href="chatwseller.html">
-        <span>💬</span>
-    </a>
-
-    <a href="account.html">
-      <span>👤</span>
-    </a>
-
-</div>
+      <span>❤️</span>
+      <a href="chatwseller.html"><span>💬</span></a>
+      <a href="account.html"><span>👤</span></a>
+    </div>
   </header>
 
   <main class="product-page">
@@ -46,17 +32,14 @@
     </div>
 
     <div class="product-details">
-      <h1 class="product-title">ITEM X</h1>
-      <p class="product-price">$X.XX</p>
-      <p class="product-condition">SECOND HAND</p>
-      <p class="product-category"><strong>Category:</strong> ITEMCAT</p>
+      <h1 id="product-title" class="product-title">ITEM X</h1>
+      <p id="product-price" class="product-price">$X.XX</p>
+      <p id="product-condition" class="product-condition">SECOND HAND</p>
+      <p id="product-category" class="product-category"><strong>Category:</strong> ITEMCAT</p>
 
       <div class="product-description">
         <h3>Description</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis felis scelerisque, pulvinar lorem ut, pellentesque elit. 
-          Etiam elementum eleifend tempus sit amet auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        </p>
+        <p id="product-description">Lorem ipsum dolor sit amet...</p>
       </div>
 
       <div class="product-actions">
@@ -72,7 +55,7 @@
     <div class="seller-info">
       <div class="seller-avatar"></div>
       <div class="seller-details">
-        <p><strong>seller1</strong></p>
+        <p id="seller-username"><strong>seller1</strong></p>
         <p>Deal Method: Meet-ups, XX</p>
         <p>Location: Meet-ups at XXX</p>
       </div>
@@ -80,10 +63,9 @@
 
     <footer>
       <p>&copy; 2025 MokeSell | Help Center | Privacy Policy | Terms</p>
-  </footer>
-
+    </footer>
   </main>
 
+  <script src="productlisting.js" defer></script>
 </body>
-
 </html>
