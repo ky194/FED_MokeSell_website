@@ -43,6 +43,28 @@ async function fetchProductDetails() {
   }
 }
 
+// Function to search and filter products based on input
+function searchProducts(query) {
+  const listingsGrid = document.querySelector(".listings-grid");
+  const cards = listingsGrid.querySelectorAll(".item-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector('.item-title').textContent.toLowerCase();
+    if (title.includes(query.toLowerCase())) {
+      card.style.display = 'block'; // Show card if query matches title
+    } else {
+      card.style.display = 'none'; // Hide card if query does not match
+    }
+  });
+}
+
+// Add event listener for the search input when the user presses "Enter"
+document.querySelector('.search-bar').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {  // Check if "Enter" is pressed
+    const query = e.target.value;  // Get the query from the input
+    searchProducts(query);  // Call the search function with the entered query
+  }
+});
+
 // Call the function when the page loads
 document.addEventListener("DOMContentLoaded", fetchProductDetails);
-
