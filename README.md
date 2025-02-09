@@ -35,8 +35,6 @@ https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-i
 Chat GPT was used to create the icons 
 
 ## Credits 
-Product pictures are taken from Carousell & Shopee.
-Stock pictures were taken from Storyset & Flaticon.
 
 ### Content
 Placeholder text generated using Lorem Ipsum for testing
