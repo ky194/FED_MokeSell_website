@@ -24,14 +24,12 @@ https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-i
 6. Chat with Seller page - A messaging interface enables direct communication between buyers and sellers
 7. Account page - Displays user profiles, listing history, and reviews from other users 
 
-### Features left to implement
-
 ## Technologies Used
 1. HTML - for structuring web pages 
 2. CSS - for styling and responsiveness
 3. JavaScript - for interactivity 
 4. API integration (Supabase) - to fetch product listings and enable chat functionality
-5. GitHub - version control and 
+5. GitHub - version control  
 
 ### Assitive AI 
 Chat GPT was used to create the icons 
@@ -41,11 +39,12 @@ Product pictures are taken from Carousell & Shopee.
 Stock pictures were taken from Storyset & Flaticon.
 
 ### Content
-
+Placeholder text generated using Lorem Ipsum for testing
 
 ### Media
-
+Product pictures are taken from Carousell & Shopee.
+Stock pictures were taken from Storyset & Flaticon.
 
 ### Acknowledgements
-We received inspiration for this project from Carousell, and Telegram.
+We received inspiration for this project from Carousell and Telegram.
 
