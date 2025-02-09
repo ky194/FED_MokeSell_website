@@ -1,37 +1,50 @@
-function fetchProducts() {
-    const products = [
-      { id: 1, image: "https://via.placeholder.com/150", name: "Product A", price: 25.99, type: "Second Hand" },
-      { id: 2, image: "https://via.placeholder.com/150", name: "Product B", price: 19.99, type: "Second Hand" },
-      { id: 3, image: "https://via.placeholder.com/150", name: "Product C", price: 12.49, type: "Second Hand" },
-      { id: 4, image: "https://via.placeholder.com/150", name: "Product D", price: 45.00, type: "Second Hand" },
-      { id: 5, image: "https://via.placeholder.com/150", name: "Product E", price: 30.75, type: "Second Hand" },
-    ];
-  
+const supabaseUrl = 'https://lfnneupmzaujymixridw.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxmbm5ldXBtemF1anltaXhyaWR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg4NjAyODgsImV4cCI6MjA1NDQzNjI4OH0.t4Ar8iB5MkNhsU8G7PTBzfV9isLPgn7tc-pk9S3A35I';
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-    displayProducts(products);
-  }
-  
-  function displayProducts(products) {
-    const productGrid = document.getElementById("product-grid");
-  
-    products.forEach((product) => {
-      const productCard = document.createElement("div");
-      productCard.classList.add("product-card");
-  
-      productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-image" />
-        <h3 class="product-title">${product.name}</h3>
-        <p class="product-price">$${product.price}</p>
-        <p class="product-type">${product.type}</p>
+
+
+// Fetch all products from Supabase
+async function fetchProductDetails() {
+  try {
+    // Fetch data from Supabase
+    const { data, error } = await supabase
+      .from('listing')  // Replace with your actual table name
+      .select('*');
+   
+    if (error) throw error;
+
+
+    const listingsGrid = document.querySelector(".listings-grid");
+
+
+    // Clear existing content
+    listingsGrid.innerHTML = '';
+
+
+    // Loop through each product and append a new item card
+    data.forEach(product => {
+      const itemCard = document.createElement('a');
+      itemCard.href = `productlisting.html?id=${product.listingid}`; // Link to product details page
+
+
+      itemCard.innerHTML = `
+        <div class="item-card">
+          <img src="./image_resources/${product.image}" alt="${product.listingname}" class="item-image">
+          <div class="item-title">${product.listingname}</div>
+          <div class="item-price">$${product.listprice.toFixed(2)}</div>
+          <div class="item-condition">${product.listingcond}</div>
+        </div>
       `;
-  
-      productCard.addEventListener("click", () => {
-        window.location.href = `product.html?id=${product.id}`;
-      });
-  
-      productGrid.appendChild(productCard);
+
+
+      listingsGrid.appendChild(itemCard);
     });
+  } catch (error) {
+    console.error("Error fetching product details:", error);
   }
-  
-  fetchProducts();
-  
+}
+
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", fetchProductDetails);

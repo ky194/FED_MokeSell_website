@@ -8,6 +8,8 @@
   <title>Homepage | MokeSell</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="script.js"></script>
 
 </head>
 
@@ -41,23 +43,19 @@
 
     <button class="listings-button">LISTINGS</button>
     <section class="listings-grid">
- 
-      <a href="productlisting.html">
-
-        <div class="item-card">
-
-          <img src="./image resources/Vetek Digital Camera 8.jpg" alt="Item 1" class="item-image">
-          <div class="item-title">Vetek 8 Digital Camera Not used</div>
-          <div class="item-price">$89.00</div>
-          <div class="item-condition">NEW</div>
-
-        </div>
-
-      </a>
 
       <div class="item-card">
 
-        <img src="./image resources/Vintage Y2k Low rise jeans - replay original jeans.jpg" alt="Item 2" class="item-image">
+        <img src="./image_resources/Vetek Digital Camera 8.jpg" alt="Item 1" class="item-image">
+        <div class="item-title">Vetek 8 Digital Camera Not used</div>
+        <div class="item-price">$89.00</div>
+        <div class="item-condition">NEW</div>
+
+      </div>
+
+      <div class="item-card">
+
+        <img src="./image_resources/Vintage Y2k Low rise jeans - replay original jeans.jpg" alt="Item 2" class="item-image">
         <div class="item-title">Vintage Y2k Low rise jeans - replay original jeans</div>
         <div class="item-price">$30.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -66,7 +64,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Adidas wales bonner samba.jpg" alt="Item 3" class="item-image">
+        <img src="./image_resources/Adidas wales bonner samba.jpg" alt="Item 3" class="item-image">
         <div class="item-title">Adidas shoes wales bonner samba</div>
         <div class="item-price">$85.00</div>
         <div class="item-condition">NEW</div>
@@ -75,7 +73,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Sennheiser Momentum 4 Headphones.jpg" alt="Item 4" class="item-image">
+        <img src="./image_resources/Sennheiser Momentum 4 Headphones.jpg" alt="Item 4" class="item-image">
         <div class="item-title">Sennheiser Momentum 4 Headphones</div>
         <div class="item-price">$250.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -84,7 +82,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Chello THALIA SHIRRED PEPLUM TOP IN SKETCHBOOK BLOOMS.jpg" alt="Item 5" class="item-image">
+        <img src="./image_resources/Chello THALIA SHIRRED PEPLUM TOP IN SKETCHBOOK BLOOMS.jpg" alt="Item 5" class="item-image">
         <div class="item-title">Chello THALIA SHIRRED PEPLUM TOP IN SKETCHBOOK BLOOMS</div>
         <div class="item-price">$37.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -93,7 +91,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Onitsuka Tiger Mexico 66 Cream Black silver.jpg" alt="Item 6" class="item-image">
+        <img src="./image_resources/Onitsuka Tiger Mexico 66 Cream Black silver.jpg" alt="Item 6" class="item-image">
         <div class="item-title">Onitsuka Tiger Mexico 66 Cream Black silver shoes</div>
         <div class="item-price">$120.00</div>
         <div class="item-condition">NEW</div>
@@ -102,7 +100,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/100 authentic apple Airpords max headphones.jpg" alt="Item 7" class="item-image">
+        <img src="./image_resources/100 authentic apple Airpords max headphones.jpg" alt="Item 7" class="item-image">
         <div class="item-title">100% authentic apple Airpords max headphones</div>
         <div class="item-price">$600.00</div>
         <div class="item-condition">NEW</div>
@@ -111,7 +109,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Olympus VH-520 white digital camera digicam ccd.jpg" alt="Item 8" class="item-image">
+        <img src="./image_resources/Olympus VH-520 white digital camera digicam ccd.jpg" alt="Item 8" class="item-image">
         <div class="item-title">Olympus VH-520 white digital camera digicam ccd</div>
         <div class="item-price">$200.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -120,7 +118,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Marshall Major IV on ear headphones.jpg" alt="Item 9" class="item-image">
+        <img src="./image_resources/Marshall Major IV on ear headphones.jpg" alt="Item 9" class="item-image">
         <div class="item-title">Marshall Major IV on ear headphones</div>
         <div class="item-price">$180.00</div>
         <div class="item-condition">NEW</div>
@@ -129,7 +127,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/sony_cybershot_w830.jpg" alt="Item 10" class="item-image">
+        <img src="./image_resources/sony_cybershot_w830.jpg" alt="Item 10" class="item-image">
         <div class="item-title">[DIGITAL CAMERA] SONY CYBERSHOT W830</div>
         <div class="item-price">$200.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -138,7 +136,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Lovito Casual Plain Lace Up Button Blouse for.png" alt="Item 11" class="item-image">
+        <img src="./image_resources/Lovito Casual Plain Lace Up Button Blouse for.png" alt="Item 11" class="item-image">
         <div class="item-title">Lovito Casual Plain Lace Up Button Blouse for Women L87ED024</div>
         <div class="item-price">$10.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -147,7 +145,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Dr Marten leather shoe.jpg" alt="Item 12" class="item-image">
+        <img src="./image_resources/Dr Marten leather shoe.jpg" alt="Item 12" class="item-image">
         <div class="item-title">Doc Marts Leather Shoe | Authentic Shoe</div>
         <div class="item-price">$120.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -156,7 +154,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Lovet Emma Mary Jane Flats (Bordeaux Red).jpg" alt="Item 13" class="item-image">
+        <img src="./image_resources/Lovet Emma Mary Jane Flats (Bordeaux Red).jpg" alt="Item 13" class="item-image">
         <div class="item-title">Lovet Emma Mary Jane Flats (Bordeaux Red) Shoes</div>
         <div class="item-price">$35.00</div>
         <div class="item-condition">NEW</div>
@@ -165,7 +163,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Libra TOP.jpg" alt="Item 14" class="item-image">
+        <img src="./image_resources/Libra TOP.jpg" alt="Item 14" class="item-image">
         <div class="item-title">Libra Top women's clothes shirts</div>
         <div class="item-price">$9.70</div>
         <div class="item-condition">SECOND HAND</div>
@@ -174,7 +172,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Olympus Stylus VG-180 Black Digital Camera Digicam.jpg" alt="Item 15" class="item-image">
+        <img src="./image_resources/Olympus Stylus VG-180 Black Digital Camera Digicam.jpg" alt="Item 15" class="item-image">
         <div class="item-title">Olympus Stylus VG-180 Black | Digital Camera Digicam</div>
         <div class="item-price">$160.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -183,7 +181,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Sony Headphones.jpg" alt="Item 16" class="item-image">
+        <img src="./image_resources/Sony Headphones.jpg" alt="Item 16" class="item-image">
         <div class="item-title">Sony Headphones Brand New Mint Condition</div>
         <div class="item-price">$300.00</div>
         <div class="item-condition">NEW</div>
@@ -192,7 +190,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/sony_cybershot_silver_digital__17.jpg" alt="Item 17" class="item-image">
+        <img src="./image_resources/sony_cybershot_silver_digital__17.jpg" alt="Item 17" class="item-image">
         <div class="item-title">Sony Cybershot Silver Digital Camera</div>
         <div class="item-price">$170.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -201,7 +199,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/New balance 530 Women US 8.5.jpg" alt="Item 18" class="item-image">
+        <img src="./image_resources/New balance 530 Women US 8.5.jpg" alt="Item 18" class="item-image">
         <div class="item-title">New balance 530 Women Shoes US 8.5</div>
         <div class="item-price">$80.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -210,7 +208,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Bose QuietComfort Ultra Headphones.jpg" alt="Item 19" class="item-image">
+        <img src="./image_resources/Bose QuietComfort Ultra Headphones.jpg" alt="Item 19" class="item-image">
         <div class="item-title">Bose QuietComfort Ultra</div>
         <div class="item-price">$350.00</div>
         <div class="item-condition">NEW</div>
@@ -219,7 +217,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/HITAM Oora Women's black imported Jeans.png" alt="Item 20" class="item-image">
+        <img src="./image_resources/HITAM Oora Women's black imported Jeans.png" alt="Item 20" class="item-image">
         <div class="item-title">Oora Womens's Jeans | womens clothing clothes secondhand</div>
         <div class="item-price">$15.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -228,7 +226,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/JNCO Jeans New Y2K Harajuku Hip Hop Letter Em.png" alt="Item 21" class="item-image">
+        <img src="./image_resources/JNCO Jeans New Y2K Harajuku Hip Hop Letter Em.png" alt="Item 21" class="item-image">
         <div class="item-title">JNCO Jeans New Y2K Harajuku Hip Hop Letter Embroidered Vintage Baggy Jeans Denim Pants Mens Womens Clothes</div>
         <div class="item-price">$32.00</div>
         <div class="item-condition">NEW</div>
@@ -237,7 +235,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/PANASONIC LUMIX DMC-FP1 pink digicam digital camera.jpg" alt="Item 22" class="item-image">
+        <img src="./image_resources/PANASONIC LUMIX DMC-FP1 pink digicam digital camera.jpg" alt="Item 22" class="item-image">
         <div class="item-title">PANASONIC LUMIX DMC-FP1 pink digicam digital camera</div>
         <div class="item-price">$165.00</div>
         <div class="item-condition">SECOND HAND</div>
@@ -246,7 +244,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Converse Chuck 70 High Black.jpg" alt="Item 23" class="item-image">
+        <img src="./image_resources/Converse Chuck 70 High Black.jpg" alt="Item 23" class="item-image">
         <div class="item-title">WTS Converse Chuck 70 High Black Unisex Shoes</div>
         <div class="item-price">$90.00</div>
         <div class="item-condition">NEW</div>
@@ -255,7 +253,7 @@
 
       <div class="item-card">
 
-        <img src="./image resources/Bang & Olufsen Beoplay H4.jpg" alt="Item 24" class="item-image">
+        <img src="./image_resources/Bang & Olufsen Beoplay H4.jpg" alt="Item 24" class="item-image">
         <div class="item-title">Bang & Olufsen Beoplay H4 2nd gen headphone new in sealed box</div>
         <div class="item-price">$250.00</div>
         <div class="item-condition">NEW</div>
