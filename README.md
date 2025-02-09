@@ -24,15 +24,17 @@ https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-i
 6. Chat with Seller page - A messaging interface enables direct communication between buyers and sellers
 7. Account page - Displays user profiles, listing history, and reviews from other users 
 
+### Features Left to Implement
+1. Uploading pictures for profile pictures
+
 ## Technologies Used
 1. HTML - for structuring web pages 
 2. CSS - for styling and responsiveness
 3. JavaScript - for interactivity 
-4. API integration (Supabase) - to fetch product listings and enable chat functionality
+4. API integration (RestDB) - to fetch product listings and enable chat functionality
 5. GitHub - version control  
 
-### Assitive AI 
-Chat GPT was used to create the icons 
+### Assistive AI 
 
 ## Credits 
 
