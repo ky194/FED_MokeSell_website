@@ -21,5 +21,11 @@ document.getElementById("createaccount-btn").addEventListener("click", () => {
     alert(`Account created successfully for: ${username} (${email})`);
     
     // Redirect to home page or login page after account creation
-    window.location.href = "index.html"; 
+    window.location.href = "index.html";
+
+      // Event listener for forgot password button
+    document.getElementById("createaccount-btn").addEventListener("click", () => {
+        alert("Creating your account...");
+        window.location.href = "index.html";
+    });
 });
