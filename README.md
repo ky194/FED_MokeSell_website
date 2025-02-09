@@ -31,7 +31,10 @@ https://www.figma.com/design/IwPFcrgZhkBTaTHH6AfI27/FED_MokeSellWireframe?node-i
 2. CSS - for styling and responsiveness
 3. JavaScript - for interactivity 
 4. API integration (Supabase) - to fetch product listings and enable chat functionality
-5. GitHub - version control and collaboration
+5. GitHub - version control and 
+
+### Assitive AI 
+Chat GPT was used to create the icons 
 
 ## Credits 
 Product pictures are taken from Carousell & Shopee.
