@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   color: #333;
   display: flex;
   height: 100vh;
@@ -61,8 +61,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  background-color: white;
+  color: black;
+}
+
+.arrow-back {
+  width: 25px;
+  height: auto;
 }
 
 .seller-info {
@@ -78,6 +83,12 @@ body {
   margin-right: 10px;
 }
 
+.seller-details p {
+  margin: 2px 0; 
+  font-size: 0.9rem;
+  line-height: 1.2; 
+}
+
 /* Chat Messages */
 .chat-content {
   flex: 1;
@@ -87,6 +98,7 @@ body {
   gap: 10px;
   overflow-y: auto;
   background-color: #f5f5f5;
+  justify-content: flex-start; 
 }
 
 .message {
@@ -97,19 +109,53 @@ body {
   font-size: 0.9rem;
 }
 
-/* Buyer's Messages */
-.message-buyer {
-  align-self: flex-start;
-  background-color: #ddd;
-  color: #333;
+/* Chat Messages */
+.chat-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increase spacing between messages */
+  overflow-y: auto;
+  background-color: #f5f5f5;
 }
 
-/* Seller's Messages */
-.message-seller {
-  align-self: flex-end;
-  background-color: #3498db;
-  color: #fff;
+/* General Message Styling */
+.message {
+  padding: 8px 12px; /* Ensures padding around text */
+  border-radius: 15px; /* Smooth rounded edges */
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  display: block; /* Shrinks the bubble to fit the text */
+  max-width: 70%;
+  min-width: fit-content; /* Prevents overly stretched bubbles */
+  margin-bottom: 10px; /* Adds spacing between messages */
 }
+
+
+.message-buyer {
+  align-self: flex-start; /* Aligns the buyer's message to the left */
+  background-color: grey;
+  color: #fff;
+  border-radius: 15px 15px 5px 15px;
+  text-align: left;
+  max-width: fit-content;
+  margin-bottom: 20px;
+  margin-left: auto; /* Pushes the message all the way to the right */
+  padding-right: 20px; /* Padding between the message and the screen edge */
+}
+
+/* Seller's Messages - Align Right */
+.message-seller {
+  align-self: flex-end; /* Aligns the seller's message to the right */
+  background-color: grey;
+  color: #fff;
+  border-radius: 5px 15px 15px 15px;
+  text-align: right;
+  max-width: fit-content;
+  margin-bottom: 20px;
+}
+
 
 /* Footer */
 .chat-footer {
@@ -120,6 +166,7 @@ body {
 }
 
 .message-input {
+  font-family: 'Inter', sans-serif;
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
@@ -127,18 +174,16 @@ body {
 }
 
 .send-button {
+  font-family: 'Inter', sans-serif;
   padding: 10px 20px;
   margin-left: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #3498db;
+  background-color: #C97C7C;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
 
-.send-button:hover {
-  background-color: #2980b9;
-}
 
   
