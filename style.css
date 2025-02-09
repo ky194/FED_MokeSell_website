@@ -99,24 +99,32 @@
   }
   
   .item-title {
+    text-align: left;
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
     display: -webkit-box; /* block for text */
     -webkit-line-clamp: 2; /* limits text to 2 lines */
+    /* ^^ not supported across all browsers*/
     -webkit-box-orient: vertical; /* block is vertical */
     overflow: hidden; /* hides extra text */
     text-overflow: ellipsis; /* adds "..." at the end of truncated text */
     margin: 10px 0;
+
+    /* for non-webkit broswers -- firefox/older browsers*/
+    max-height: 3.2em; 
+    line-height: 1.6em; 
   }
   
   .item-price {
+    text-align: left;
     color: #28a745;
     font-size: 1.1em;
     font-weight: bold;
   }
   
   .item-condition {
+    text-align: left;
     font-size: 0.9em;
     color: #555;
   }
